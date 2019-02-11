@@ -15,6 +15,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -27,45 +28,18 @@ import java.util.regex.Pattern as Pattern
 import static org.apache.commons.lang3.StringUtils.join
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 
-//WebUI.openBrowser('')
-def driver = DriverFactory.getWebDriver()
 
-String baseUrl = 'https://feellio-cuisine-demo.mybigcommerce.com/shop-all/'
-
-selenium = new WebDriverBackedSelenium(driver, baseUrl)
-
-//selenium.open('https://feellio-cuisine-demo.mybigcommerce.com/shop-all/')
-def i = 1
-
-def j = 2
-
-for (def index : (1..1)) {
-    WebUI.delay(3)
-
-    if ((index % (i + 3)) == 0) {
-        WebUI.scrollToPosition(0, 400 * j)
-
-        j = (j + 1)
-
-        i = (i + 3)
-    }
-    
-    WebUI.delay(3)
-
-    WebUI.click(findTestObject('New Test Object',[('index'):index]))
-
-    WebUI.delay(3)
-
-    if (WebUI.verifyElementVisible(findTestObject('Product Iteration Objects/addToCartObject'), FailureHandling.OPTIONAL)) {
-        WebUI.delay(3)
-
-        WebUI.click(findTestObject('Product Iteration Objects/addToCartObject'))
-
-        WebUI.delay(3)
-
-        selenium.click('//section/a[2]')
-    } else {
-        selenium.click('//section/a[2]')
-    }
+WebUI.openBrowser('')
+for (def index2 : navlink)
+{
+	
+	WebUI.navigateToUrl(GlobalVariable.url + index2)
+	
+	WebUI.delay(6)
+	for (def index : links) 
+	{
+		WebUI.click(findTestObject('FilterPage_objects/FilterLinks', [('link'): index]),FailureHandling.OPTIONAL)
+	
+		WebUI.callTestCase(findTestCase('Test Suite Data/TC_ProductLoop'), [:], FailureHandling.STOP_ON_FAILURE)
+	}	
 }
-

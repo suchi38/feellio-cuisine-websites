@@ -16,5 +16,26 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Test Suite Data/TC_Filterbyprice</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>d842c76f-f475-4fca-8165-b42ceedbbfcf</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/external data</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>d842c76f-f475-4fca-8165-b42ceedbbfcf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Navigation links</value>
+         <variableId>42a679a9-3744-4b0a-b628-9d3632a46aae</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e48071f0-bea4-4828-9da7-152adb07fb89</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC_Filterbyprice</name>
+   <name>TC_Filterprice by variable</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>677cdc68-2b06-4760-8fff-84420c7d9fb9</testCaseGuid>
+   <testCaseGuid>c1cd53e9-1746-4907-8998-aaac7edbe424</testCaseGuid>
    <variable>
-      <defaultValue>['$0.00 - $51.00', '$51.00 - $94.00']</defaultValue>
+      <defaultValue>['$51.00 - $98.00', '$0.00 - $51.00']</defaultValue>
       <description></description>
-      <id>42a679a9-3744-4b0a-b628-9d3632a46aae</id>
+      <id>8d6d3f0a-8aff-4776-b4e1-13321b06ac87</id>
       <masked>false</masked>
       <name>links</name>
    </variable>
    <variable>
       <defaultValue>['shop-all', 'bath']</defaultValue>
       <description></description>
-      <id>e48071f0-bea4-4828-9da7-152adb07fb89</id>
+      <id>d4d4fae7-f76d-40b4-95a5-2c9422cf0c59</id>
       <masked>false</masked>
       <name>navlink</name>
    </variable>

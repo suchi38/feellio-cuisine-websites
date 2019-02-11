@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_ProductLoop by variable</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>13cd4196-8001-4332-b41f-e0f87f788bc2</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8dfc9c95-429e-4de8-9300-3093897cb95a</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
